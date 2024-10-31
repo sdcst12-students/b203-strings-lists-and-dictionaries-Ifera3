@@ -26,7 +26,7 @@ input("Press enter to continue")
 print("\nIf you want to access the values of your dictionary with a for loop")
 print("you will need to include the key in a reference to the dictionary element")
 for i in teachers:
-    print(f"  key:{i} and value:{teachers[i]}")
+    print(f"  key: {i} and value: {teachers[i]}")
 
 
 

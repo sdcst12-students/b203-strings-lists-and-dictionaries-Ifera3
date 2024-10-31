@@ -46,6 +46,7 @@ inventory =  {
     19 : 30,
     'none' : 0
 }
+```
 
 ### XX Tasks
 

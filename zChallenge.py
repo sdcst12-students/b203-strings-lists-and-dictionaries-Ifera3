@@ -2,7 +2,9 @@
 # Explain what this code does
 
 import random
+
 x = []
+
 for i in range(40):
     if random.randint(0,1):
         x.append(random.randint(1,10))
@@ -11,4 +13,6 @@ for i in range(40):
 
 print(x)
 
+"""
 
+"""

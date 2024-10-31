@@ -11,7 +11,14 @@ def squares(n):
     # x will be the generated dictionary
     x={}
     # your code goes here
+
+    for i in range(1, n):
+        x[i] = i**2
+
+    print(x)
+
     return x
 
-assert squares(8) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
-assert squares(10) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+if __name__ == '__main__':
+    assert squares(8) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
+    assert squares(10) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}

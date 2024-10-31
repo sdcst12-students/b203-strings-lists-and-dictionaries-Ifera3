@@ -41,6 +41,8 @@ for i in x:
         print(f"{i} was found in the sentence")
     else:
         print(i)
+else:
+    print("\n")
     
     
 '''
