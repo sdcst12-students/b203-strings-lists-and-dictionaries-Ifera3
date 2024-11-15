@@ -7,8 +7,9 @@ def main():
         action = "\'" + input("get iteam or drop iteam: ")
         if '\'end' in action:
             break
-        elif '\'get' in action:
-            action = action.replace("\'get ", "")
+        elif '\'get' in action or '\'g' in action:
+            action = action.replace("\'get ", " ")
+            action = action.replace("\'g ", " ")
             action = action.split(" ")
             iteam = ''
             a = 1
@@ -23,8 +24,9 @@ def main():
                 invatory[iteam] = invatory[iteam] + a
             else:
                 invatory[iteam] = a
-        elif '\'drop' in action:
-            action = action.replace("\'drop ", "")
+        elif '\'drop' in action or '\'d' in action:
+            action = action.replace("\'drop ", " ")
+            action = action.replace("\'d ", " ")
             action = action.split(" ")
             iteam = ''
             a = 1
@@ -44,11 +46,21 @@ def main():
                     invatory[iteam] = invatory[iteam] - a
             else:
                 print(f"{iteam} not in your invatory")            
-        elif '\'show invatory' in action:
+        elif '\'show invatory' in action or '\'si' in action:
             print(invatory)
+            tableLingth = 5
             for i in invatory:
-                tableLingth = 7 + len(i) + len(str(invatory[i]))
+                if tableLingth < 7 + len(i) + len(str(invatory[i])):
+                    tableLingth = 7 + len(i) + len(str(invatory[i]))
                 print(tableLingth)
+            print('-' * tableLingth)
+            for i in invatory:
+                if tableLingth > 7 + len(i) + len(str(invatory[i])):
+                    a = ' ' * (tableLingth - (7 + len(i) + len(str(invatory[i]))))
+                    print(f'| {i} | {invatory[i]} {a}|')
+                else:
+                    print(f'| {i} | {invatory[i]} |')
+                print('-' * tableLingth)
         else:
             print("Not valid acction")
             if input("End code? ") == 'yes':
